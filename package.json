@@ -1,0 +1,23 @@
+{
+  "name": "slutprojekt-websecurity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zocom-david-lundholm/slutprojekt-websecurity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zocom-david-lundholm/slutprojekt-websecurity/issues"
+  },
+  "homepage": "https://github.com/zocom-david-lundholm/slutprojekt-websecurity#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
