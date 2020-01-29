@@ -22,6 +22,15 @@ module.exports= {
             }
         })
     },
+
+    async auth(body){
+        return await db.findOne({
+        email:body.email,
+        password:body.password
+        })
+    }
+
+
     
    
 }
