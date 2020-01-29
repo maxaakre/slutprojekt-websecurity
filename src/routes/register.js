@@ -6,7 +6,13 @@ const User = require ('../models/users')
 
 router.post('/', async (req,res) =>{
     const usr = await User.create(req.body)
-    res.json(usr)
+    if(usr){
+        res.json({message:"Youare registereterdec !?!"})
+    }else{
+        res.json({message:"You done goofed!?!"})
+
+    }
+    
 })
 
 
