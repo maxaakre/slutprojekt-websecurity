@@ -1,6 +1,6 @@
 const Datastore = require("nedb-promise");
 const users = new Datastore({
-  filename: "./users.db",
+  filename: "./db/myddata.db",
   autoload: true
 });
 const bcrypt = require("bcrypt");
@@ -40,12 +40,22 @@ module.exports = {
     if (email !== user.email) {
       return false;
     } else {
-      const isMatch = await bcrypt.compare(password, user.password);
-      if (isMatch) {
+      const passwordHash = await bcrypt.compare(password, user.password);
+      if (passwordHash) {
         const payload = {
-          email:user.email,
-          password: user.password
-        };
+            token: "toke",
+            user: {
+                email: user.email,
+                name: user.name,
+                role: user.role,
+                adress: {
+                    street: user.adress.street,
+                    city: user.adress.city,
+                    zip: user.adress.zip
+                }
+            } 
+
+        }
         const secret = process.env.SECRET;
         const token = jwt.sign(payload, secret);
         return token;
