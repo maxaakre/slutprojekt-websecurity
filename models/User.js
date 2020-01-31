@@ -20,6 +20,7 @@ module.exports = {
           password: passwordHash,
           role: "customer",
           name: body.name,
+          admin:true,
           adress: {
             street: body.adress.street,
             zip: body.adress.zip,
@@ -41,7 +42,7 @@ module.exports = {
       return false;
     } else {
       const passwordHash = await bcrypt.compare(password, user.password);
-      if (passwordHash) {
+      if (passwordHash){
         const payload = {
             token: "toke",
             user: {
