@@ -13,5 +13,11 @@ const products = new Datastore({
 module.exports = {
     async all(){
         return await products.find({})
-    }
+    },
+
+    async get(productID){
+        return await products.findOne({_id:productID})
+    },
+
+
 }
