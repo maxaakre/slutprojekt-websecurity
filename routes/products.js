@@ -34,6 +34,15 @@ router.delete("/api/products/:id",async (req,res)=>{
   }
 })
 
+router.patch("/api/products/:id", async(req,res)=>{
+const product = await Product.update(req.params.id,req.body)
+if(product){
+res.json({message: "Updated product!"})
+}else{
+  res.json({message:"Product not found!"})
+}
+})
+
 
 
 module.exports = router;

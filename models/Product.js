@@ -35,5 +35,16 @@ module.exports = {
     async remove(id){
         const deleteProduct = await products.remove({_id:id})
         return deleteProduct >0
+    },
+
+    async update(id,body){
+        let updateProduct = await products.findOne(
+            {_id:id}
+
+        )
+        updateProduct = await products.update(updateProduct,{
+            $set: body
+        })
+        return updateProduct > 0
     }
 }
