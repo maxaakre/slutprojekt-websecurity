@@ -19,5 +19,21 @@ module.exports = {
         return await products.findOne({_id:productID})
     },
 
+    async create(body){
+        const newProduct = {
+            _id: body.id,
+            serial: body.serial,
+            title: body.title,
+            price: body.pice,
+            shortDesc: body.shortDesc,
+            longDesc: body.longDesc,
+            imgFile: body.imgFile
+        }
+        return await products.insert( newProduct)
+    },
 
+    async remove(id){
+        const deleteProduct = await products.remove({_id:id})
+        return deleteProduct >0
+    }
 }

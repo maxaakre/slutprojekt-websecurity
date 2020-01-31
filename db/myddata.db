@@ -1,1 +1,3 @@
-{"email":"maxaakre@gmail.com","password":"$2b$10$3nJnUT2PIKAzglZYXIZr/uJjGCIWGm8LxrlklZ.2gQKB.A0sbVDuu","role":"customer","name":"Max Aakre","adress":{"street":"Luxgatan 5","zip":"11262","city":"Stockholm"},"_id":"2xypcJmaQTm9Lnom"}
+{"email":"maxaakre@gmail.com","password":"$2b$10$WctCvrSHJKzZcFNrBFI3l.a1eGVQ5HQAxU0MRHcXSV4P.5jSIFCHq","role":"admin","name":"Max Aakre","adress":{"street":"Luxgatan 5","zip":"11262","city":"Stockholm"},"_id":"CWWHGKtv9Ej6RyoA"}
+{"email":"aleks@gmail.com","password":"$2b$10$W3AUDyMgce/3wlsQsJ9JQ.dsBSqimmnzEyyHJeXlOhtjn1qz1NGum","role":"customer","name":"aleks","adress":{"street":"dawn","zip":"11243","city":"nacka"},"_id":"jYwz4KYZpDDG18YW"}
+{"email":"customer@gmail.com","password":"$2b$10$B/gU9flY0SdkQQSt1pEK1OhYy0apkNYUJL6bB0eS/ARIGNhsLosg2","role":"customer","name":"customer","adress":{"street":"Folkungagatan 65","zip":"11622","city":"Stockholm"},"_id":"rrYyD8CMkKuubbSg"}
