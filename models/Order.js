@@ -18,10 +18,11 @@ module.exports = {
             status: 'inProcess', 
             items: body.items,
             orderValue: body.orderValue,
-            cardOwner: body.cardOwner,
-            cardNumber: body.cardNumber,
-            validUntil: body.validUntil,
-            cvv: body.cvv,
+            payment:{
+            cardOwner: body.payment.cardOwner,
+            cardNumber: body.payment.cardNumber,
+            validUntil: body.payment.validUntil,
+            cvv: body.payment.cvv},
             orderHistory: []
         }
         return await products.insert( newOrder)
