@@ -20,7 +20,6 @@ module.exports = {
           password: passwordHash,
           role: "customer",
           name: body.name,
-          admin:true,
           adress: {
             street: body.adress.street,
             zip: body.adress.zip,
@@ -35,31 +34,32 @@ module.exports = {
   },
 
   async login(body) {
-    const user = await users.findOne({});
-    const email = body.email;
-    const password = body.password;
-    if (email !== user.email) {
+    const user = await users.findOne({ email:body.email });
+    if (!user) {
       return false;
     } else {
-      const passwordHash = await bcrypt.compare(password, user.password);
-      if (passwordHash){
-        const payload = {
-            token: "toke",
-            user: {
-                email: user.email,
-                name: user.name,
-                role: user.role,
-                adress: {
-                    street: user.adress.street,
-                    city: user.adress.city,
-                    zip: user.adress.zip
-                }
-            } 
-
-        }
+      const passwordMatch = await bcrypt.compare(body.password, user.password);
+      if (passwordMatch){
         const secret = process.env.SECRET;
-        const token = jwt.sign(payload, secret);
-        return token;
+        const payload = {
+          email:user.email,
+          role:user.role
+        }
+        const token = jwt.sign(payload,secret)
+        const userAuth = {
+          token: token, 
+          user:{
+            email:user.email,
+            name:user.name,
+            role:user.role,
+            adress:{
+              street: user.adress.street,
+              city: user.adress.city,
+              zip: user.adress.zip
+            }
+          }
+        };
+        return userAuth;
       } else {
         return false;
       }
