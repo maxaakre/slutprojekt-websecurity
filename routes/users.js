@@ -16,8 +16,8 @@ router.post("/api/register", async (req, res) => {
 });
 
 router.post("/api/auth", async (req, res) => {
-  const userAuth = await User.login(req.body);
-  const verify = jwt.verify(userAuth.token, process.env.SECRET);
+  const token  = await User.login(req.body);
+  const verify = jwt.verify(token, process.env.SECRET);
   if (verify) {
     res.status(201).json(verify);
     console.log(verify);
