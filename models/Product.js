@@ -24,7 +24,7 @@ module.exports = {
             _id: body.id,
             serial: body.serial,
             title: body.title,
-            price: body.pice,
+            price: body.price,
             shortDesc: body.shortDesc,
             longDesc: body.longDesc,
             imgFile: body.imgFile
@@ -45,6 +45,6 @@ module.exports = {
         updateProduct = await products.update(updateProduct,{
             $set: body
         })
-        return updateProduct > 0
+        return updateProduct 
     }
 }

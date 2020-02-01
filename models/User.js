@@ -52,7 +52,9 @@ module.exports = {
               city: user.adress.city,
               zip: user.adress.zip
             }
+            
           }
+          
         };
         return jwt.sign(payload,secret) ;
       } else {
