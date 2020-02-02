@@ -6,6 +6,7 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 // const secret = process.env.SECRET;
 
+//REGISTER NEW USER
 router.post("/api/register", async (req, res) => {
   const user = await User.register(req.body);
   if (user) {
@@ -14,7 +15,7 @@ router.post("/api/register", async (req, res) => {
     res.send("You are not a menmber try again");
   }
 });
-
+//AUTHORIZED USERS
 router.post("/api/auth", async (req, res) => {
   const token  = await User.login(req.body);
   const verify = jwt.verify(token, process.env.SECRET);

@@ -7,9 +7,11 @@ const products = new Datastore({
 
 
 module.exports = {
+    //GET ALL ORDERS
     async all(){
         return await products.find({});
     },
+    //CREATE NEW ORDER
     async create(body){
         const newOrder = {
             _id: body.id,
@@ -22,8 +24,9 @@ module.exports = {
             cardOwner: body.payment.cardOwner,
             cardNumber: body.payment.cardNumber,
             validUntil: body.payment.validUntil,
-            cvv: body.payment.cvv},
-            orderHistory: []
+            cvv: body.payment.cvv,
+            },
+            orderHistory: [],
         }
         return await products.insert( newOrder)
     },

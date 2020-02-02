@@ -8,6 +8,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 module.exports = {
+  //REGISTER NEW USER
   async register(body) {
     if (body.password === body.repeatPassword) {
       const user = await users.findOne({ email: body.email });
@@ -32,7 +33,7 @@ module.exports = {
       return false;
     }
   },
-
+  //AUTHORIZED USERS
   async login(body) {
     const user = await users.findOne({ email:body.email });
     if (!user) {

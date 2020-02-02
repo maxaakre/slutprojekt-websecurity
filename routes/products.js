@@ -2,11 +2,12 @@ const { Router } = require("express");
 const router = new Router();
 const Product = require("../models/Product");
 
+//GET ALL PRODUCTS
 router.get("/api/products", async (req, res) => {
   const products = await Product.all();
   res.json(products);
 });
-
+//GET ONE PRODUCT
 router.get("api/products/:id", async (req,res) =>{
   const products = await Product.get(req.params.id)
   if(products){
@@ -15,7 +16,7 @@ router.get("api/products/:id", async (req,res) =>{
     res.status(404).json({message:"Product not found!"})
   }
 })
-
+//CREATE NEW PRODUCT
 router.post("/api/products", async(req,res) =>{
   const products = await Product.create(req.body)
   if(products){
@@ -24,7 +25,7 @@ router.post("/api/products", async(req,res) =>{
     res.status(404).json({message:"Product already in store!"})
   }
 })
-
+//DELETE PRODUCT
 router.delete("/api/products/:id",async (req,res)=>{
   const products = await Product.remove(req.params.id)
   if(products){
@@ -33,7 +34,7 @@ router.delete("/api/products/:id",async (req,res)=>{
     res.json({message:"Could not delete item!"})
   }
 })
-
+//UPDATE PRODUCT
 router.patch("/api/products/:id", async(req,res)=>{
 const product = await Product.update(req.params.id,req.body)
 if(product){

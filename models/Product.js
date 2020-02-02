@@ -11,14 +11,15 @@ const products = new Datastore({
 // products.insert(productsArr);
 
 module.exports = {
+    //GET ALL PRODUCTS
     async all(){
         return await products.find({})
     },
-
+    //GET ONE PRODUCT
     async get(productID){
         return await products.findOne({_id:productID})
     },
-
+    //CREATE NEW PRODUCT
     async create(body){
         const newProduct = {
             _id: body.id,
@@ -31,12 +32,12 @@ module.exports = {
         }
         return await products.insert( newProduct)
     },
-
+    //REMOVE PRODUCT
     async remove(id){
         const deleteProduct = await products.remove({_id:id})
         return deleteProduct >0
     },
-
+    //UPDATE PRODUCT
     async update(id,body){
         let updateProduct = await products.findOne(
             {_id:id}
