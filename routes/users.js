@@ -10,9 +10,9 @@ const jwt = require("jsonwebtoken");
 router.post("/api/register", async (req, res) => {
   const user = await User.register(req.body);
   if (user) {
-    res.json(user);
+    res.status(201).json(user);
   } else {
-    res.send("You are not a menmber try again");
+    res.status(401).send("You are not a menmber try again");
   }
 });
 //AUTHORIZED USERS

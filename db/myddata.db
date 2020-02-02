@@ -1,2 +1,3 @@
 {"email":"elam@gmail.com","password":"$2b$10$llijEj42Q5xCpnHTVI4dHOqmPr47O7drhguDU9NA3SBzBdR9NU37W","role":"customer","name":"elam","adress":{"street":"Folkungagatan 65","zip":"11622","city":"Stockholm"},"_id":"7H2cTxgBZYxNACIM"}
 {"email":"love@gmail.com","password":"$2b$10$CLPkQRYYFK2VXi6BAf/de..rj4acU5MJxxL5x7ge.PNv3uZlSUVES","role":"admin","name":"love","adress":{"street":"love","zip":"12344","city":"Stockholm"},"_id":"WxZGID2sdc5rtnJR"}
+{"email":"ma@gmail.com","password":"$2b$10$bZUoy1/NDy3k5fMs6wgWj.D1bWIoa6JcIE6Qo7VWb6ULKaNDq1bCe","role":"customer","name":"ma","adress":{"street":"maaaa","zip":"1231","city":"Stockholm"},"_id":"1DMJwXIRlNRKcTSq"}

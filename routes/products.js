@@ -5,13 +5,13 @@ const Product = require("../models/Product");
 //GET ALL PRODUCTS
 router.get("/api/products", async (req, res) => {
   const products = await Product.all();
-  res.json(products);
+  res.status(201).json(products);
 });
 //GET ONE PRODUCT
 router.get("api/products/:id", async (req,res) =>{
   const products = await Product.get(req.params.id)
   if(products){
-    res.json(products)
+    res.status(201).json(products)
   }else{
     res.status(404).json({message:"Product not found!"})
   }
@@ -29,18 +29,18 @@ router.post("/api/products", async(req,res) =>{
 router.delete("/api/products/:id",async (req,res)=>{
   const products = await Product.remove(req.params.id)
   if(products){
-    res.json({message:"Product deleted!"})
+    res.status(201).json({message:"Product deleted!"})
   }else{
-    res.json({message:"Could not delete item!"})
+    res.status(401).json({message:"Could not delete item!"})
   }
 })
 //UPDATE PRODUCT
 router.patch("/api/products/:id", async(req,res)=>{
 const product = await Product.update(req.params.id,req.body)
 if(product){
-res.json({message: "Updated product!"})
+res.status(201).json({message: "Updated product!"})
 }else{
-  res.json({message:"Product not found!"})
+  res.status(401).json({message:"Product not found!"})
 }
 })
 
