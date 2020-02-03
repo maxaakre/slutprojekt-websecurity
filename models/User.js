@@ -57,12 +57,19 @@ module.exports = {
               street:user.adress.street,
               city: user.adress.city,
               zip:user.adress.zip
-            }
+            },
+            orderHistory: user.orderHistory
           }
         };
       } else {
         return false;
       }
     }
-  }
+  },
+  async addUserPayment(userID,payment){
+    await users.update({_id:userID}, {$set: {payment:payment}})
+  },
+  async addOrdertoUser(userID,orderID){
+    await users.update({_id:userID},{$push: {orderHistory:orderID}})
+  } 
 };

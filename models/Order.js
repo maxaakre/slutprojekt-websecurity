@@ -1,6 +1,6 @@
 const Datastore = require('nedb-promise')
-const orders = require('../models/User')
-const products = new Datastore({
+const User = require('../models/User')
+const Order = new Datastore({
     filename:'./db/orders.db',
     autoload:true
 })
@@ -9,27 +9,28 @@ const products = new Datastore({
 module.exports = {
     //GET ALL ORDERS
     async all(){
-        return await products.find({});
+        return await Order.find({});
+    },
+    async get(userID){
+        return await Order.find({owner:userID})
+        
     },
     //CREATE NEW ORDER
-    async create(body){
+    async create(body,userID){
+        console.log(body)
         const newOrder = {
-            _id: body.id,
-            owner: orders,
+            owner: userID,
             timeStamp: Date.now(), 
             status: 'inProcess', 
             items: body.items,
-            orderValue: body.orderValue,
-            payment:{
-            cardOwner: body.payment.cardOwner,
-            cardNumber: body.payment.cardNumber,
-            validUntil: body.payment.validUntil,
-            cvv: body.payment.cvv,
-            },
-            orderHistory: [],
+            orderValue: body.payment.total,
         }
-        return await products.insert( newOrder)
-    },
+        console.log(newOrder)
+      const newDocument = await Order.insert(newOrder)
+       await User.addUserPayment(userID, body.payment)
+       await User.addOrdertoUser(userID,newDocument._id)
+        return newDocument
+        },
    
     
 
