@@ -22,7 +22,6 @@ module.exports = {
     //CREATE NEW PRODUCT
     async create(body){
         const newProduct = {
-            _id: body.id,
             serial: body.serial,
             title: body.title,
             price: body.price,

@@ -1,12 +1,22 @@
 const { Router } = require("express");
 const router = new Router();
 const Product = require("../models/Order");
+const auth = require('./verifytoken')
 
 
 //GETTING ALL ORDERS
-router.get("/api/orders", async (req, res) => {
+router.get("/api/orders",auth.auth, async (req, res) => {
+  if(req.user.role === "admin"){
     const products = await Product.all();
+    console.log(req.headers.authorization)
     res.status(201).json(products);
+  }else{
+    if(req.user.role ==="customer"){
+      const products = await Product.all()
+      console.log(req.headers.authorization)
+      res.status(201).json(products)
+    }
+  }
   });
 
 //POST ALL ORDERS

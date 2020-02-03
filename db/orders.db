@@ -1,15 +1,20 @@
 {"_id":"2H4k1bFTyvnnFMZO","owner":{},"timeStamp":1580593320489,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H"],"payment":{},"orderHistory":[""]}
 {"_id":"4zdoyAkA6rEbFQdF","timeStamp":1580481101404,"status":"inProcess","items":["6IZ3xsHCzeoLw31H","74BUKD0lbZiu1ayu"]}
 {"_id":"6ormL8vCUwNpB1RI","owner":{},"timeStamp":1580631816756,"status":"inProcess","items":["7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"jajajajajaja"},"orderHistory":[]}
+{"_id":"90KqCEpk5XfGOiDD","owner":{},"timeStamp":1580678646752,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"nej"}}
 {"_id":"A6U2F9OrdzzBXVZD","owner":{},"timeStamp":1580633648782,"status":"inProcess","items":["6IZ3xsHCzeoLw31H"],"payment":{"cardOwner":"1231323"},"orderHistory":[]}
 {"_id":"AycO1LKiAvdjYIR0","owner":{},"timeStamp":1580632914154,"status":"inProcess","items":["6IZ3xsHCzeoLw31H"],"payment":{"cardOwner":"jalallaa"},"orderHistory":[null]}
 {"_id":"BZExufSxPxiw7oEg","timeStamp":1580573488982,"status":"inProcess","items":["6IZ3xsHCzeoLw31H","74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"]}
 {"_id":"ESMgb7Mi5JpReHME","owner":{},"timeStamp":1580593672693,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H"],"cardOwner":"hej","orderHistory":[]}
+{"_id":"KPy6VKXDKQJMZY92","owner":{},"timeStamp":1580678804932,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"jovisst"},"orderHistory":[]}
+{"_id":"Kk35EoGq9NuRaFVs","owner":{},"timeStamp":1580677081218,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"mamamama"},"orderHistory":[]}
 {"_id":"Mj2xbrDZfnEdgO7C","owner":{},"timeStamp":1580646582062,"status":"inProcess","items":["6IZ3xsHCzeoLw31H"],"payment":{"cardOwner":"jajjaja"},"orderHistory":[]}
 {"_id":"NWBNyec5LPVpIIMH","owner":{},"timeStamp":1580633210237,"status":"inProcess","items":["74BUKD0lbZiu1ayu"],"payment":{"cardOwner":"jala"},"orderHistory":[null]}
 {"_id":"NWGQDKPggYK7UNTU","owner":{},"timeStamp":1580593280141,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H"],"orderHistory":[]}
 {"_id":"Nt2wrAEev2PEYitS","owner":{},"timeStamp":1580649655178,"status":"inProcess","items":["6IZ3xsHCzeoLw31H","74BUKD0lbZiu1ayu"],"payment":{"cardOwner":"2133244"},"orderHistory":[]}
 {"_id":"P0k0Y02l2Ney8diM","owner":{},"timeStamp":1580595144132,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H","6IZ3xsHCzeoLw31H"],"payment":{"cardOwner":"marre"},"orderHistory":[]}
+{"_id":"QEivwt2xepBAy6fc","owner":{},"timeStamp":1580676819048,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"ma"},"orderHistory":[]}
+{"_id":"QjRTUH4mlLS9OzFi","owner":{},"timeStamp":1580676677751,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"],"orderValue":[null],"payment":{"cardOwner":"ma"},"orderHistory":[]}
 {"_id":"SBe2tBxbkADNwLMS","owner":{},"timeStamp":1580632815163,"status":"inProcess","items":["74BUKD0lbZiu1ayu"],"payment":{"cardOwner":"take my money"},"orderHistory":[null]}
 {"_id":"TjjOpj1eS05P89oh","owner":{},"timeStamp":1580594005909,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H"],"cardOwner":"max","orderHistory":[]}
 {"_id":"YlLxezG8XvFEO36u","timeStamp":1580588538666,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC","BPB24vgQpL8FEvhU","zF3h9QomlKJ6NslL"]}
@@ -21,7 +26,9 @@
 {"_id":"jle7QDgG8B61nIVR","owner":{},"timeStamp":1580631476154,"status":"inProcess","items":["7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"marre"},"orderHistory":[],"token":"token"}
 {"_id":"kwDU88LOnz7zbC1K","owner":{},"timeStamp":1580594911943,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H","6IZ3xsHCzeoLw31H"],"payment":{"cardOwner":"mamma"},"orderHistory":""}
 {"_id":"pYqFtHTzU32VcRMk","timeStamp":1580585539206,"status":"inProcess","items":["6IZ3xsHCzeoLw31H","74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC","BPB24vgQpL8FEvhU","FoIJvBgzY8Oj4VQ9"]}
+{"_id":"qgxyVfW1KKBju3Fn","owner":{},"timeStamp":1580677005412,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"12312312231312"},"orderHistory":[]}
 {"_id":"rWvcHlC9ACVxABEX","owner":{},"timeStamp":1580631629357,"status":"inProcess","items":["7YXBJbFlYnrZimAC"],"payment":{"cardOwner":"jajaj"},"orderHistory":[]}
+{"_id":"uCI4NoYorEgkKUB6","owner":{},"timeStamp":1580676616409,"status":"inProcess","items":["74BUKD0lbZiu1ayu","7YXBJbFlYnrZimAC"],"orderValue":[],"payment":{"cardOwner":"ma"},"orderHistory":[]}
 {"_id":"vRauOJysJtsJGVf6","owner":{},"timeStamp":1580593150643,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H"],"orderHistory":[]}
 {"_id":"y6k1ZZr2osjlPj4u","owner":{},"timeStamp":1580595019467,"status":"inProcess","items":["74BUKD0lbZiu1ayu","6IZ3xsHCzeoLw31H","6IZ3xsHCzeoLw31H"],"payment":{"cardOwner":"mammamia"},"orderHistory":""}
 {"_id":"yXR68HI1EVA8dyg0","owner":{},"timeStamp":1580633111013,"status":"inProcess","items":["6IZ3xsHCzeoLw31H"],"payment":{"cardOwner":"jabba"},"orderHistory":[null]}

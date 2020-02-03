@@ -43,21 +43,23 @@ module.exports = {
       if (passwordMatch){
         const secret = process.env.SECRET;
         const payload = {
-          token: "token", 
+          userID:user._id,
+          role:user.role
+          }
+          const token = jwt.sign(payload,secret)
+        return {
+          token: token,
           user:{
-            email:user.email,
+            email: user.email,
             name:user.name,
             role:user.role,
             adress:{
-              street: user.adress.street,
+              street:user.adress.street,
               city: user.adress.city,
-              zip: user.adress.zip
+              zip:user.adress.zip
             }
-            
           }
-          
         };
-        return jwt.sign(payload,secret) ;
       } else {
         return false;
       }

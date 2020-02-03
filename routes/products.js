@@ -1,6 +1,8 @@
 const { Router } = require("express");
 const router = new Router();
 const Product = require("../models/Product");
+const auth = require('./verifytoken')
+
 
 //GET ALL PRODUCTS
 router.get("/api/products", async (req, res) => {
@@ -17,28 +19,28 @@ router.get("api/products/:id", async (req,res) =>{
   }
 })
 //CREATE NEW PRODUCT
-router.post("/api/products", async(req,res) =>{
-  const products = await Product.create(req.body)
-  if(products){
+router.post("/api/products", auth.auth, async(req,res) =>{
+    if(req.user.role === "admin"){
+    const products = await Product.create(req.body)
     res.status(201).json(products)
   }else{
-    res.status(404).json({message:"Product already in store!"})
+    res.status(404).json({message:"Not aloud to put in products!"})
   }
 })
 //DELETE PRODUCT
-router.delete("/api/products/:id",async (req,res)=>{
+router.delete("/api/products/:id",auth.auth,async (req,res)=>{
+  if(req.user.role === "admin"){
   const products = await Product.remove(req.params.id)
-  if(products){
-    res.status(201).json({message:"Product deleted!"})
+  res.status(201).json(products)
   }else{
     res.status(401).json({message:"Could not delete item!"})
   }
 })
 //UPDATE PRODUCT
-router.patch("/api/products/:id", async(req,res)=>{
+router.patch("/api/products/:id",auth.auth, async(req,res)=>{
+if(req.user.role === "admin"){ 
 const product = await Product.update(req.params.id,req.body)
-if(product){
-res.status(201).json({message: "Updated product!"})
+res.status(201).json(product)
 }else{
   res.status(401).json({message:"Product not found!"})
 }

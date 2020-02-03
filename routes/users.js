@@ -18,10 +18,9 @@ router.post("/api/register", async (req, res) => {
 //AUTHORIZED USERS
 router.post("/api/auth", async (req, res) => {
   const token  = await User.login(req.body);
-  const verify = jwt.verify(token, process.env.SECRET);
-  if (verify) {
-    res.status(201).json(verify);
-    console.log(verify);
+  if (token) {
+    res.status(201).json(token)
+    console.log(token);
   }else{
     res.status(401).json({error: "Not authorized"})
   }
