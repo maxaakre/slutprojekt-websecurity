@@ -1,11 +1,10 @@
 const { Router } = require("express");
 const router = new Router();
 const Order = require("../models/Order");
-const User = require("../routes/users")
-const auth = require('./verifytoken')
+const auth = require('./verifytoken');
 
 
-//GETTING ALL ORDERS
+//GETTING ALL ORDERS, AND ORDER FOR EVERY USER
 router.get("/api/orders",auth.auth, async (req, res) => {
   if(req.user.role === "admin"){
     const order = await Order.all();

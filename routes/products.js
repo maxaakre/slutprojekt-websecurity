@@ -15,7 +15,7 @@ router.get("api/products/:id", async (req,res) =>{
   if(products){
     res.status(201).json(products)
   }else{
-    res.status(404).json({message:"Product not found!"})
+    res.status(401).json({message:"Product not found!"})
   }
 })
 //CREATE NEW PRODUCT
@@ -24,7 +24,7 @@ router.post("/api/products", auth.auth, async(req,res) =>{
     const products = await Product.create(req.body)
     res.status(201).json(products)
   }else{
-    res.status(404).json({message:"Not aloud to put in products!"})
+    res.status(401).json({message:"Not aloud to put in products!"})
   }
 })
 //DELETE PRODUCT
