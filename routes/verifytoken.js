@@ -8,7 +8,7 @@ module.exports =  {
      const secret = process.env.SECRET   
      const token = req.headers.authorization
      if(!token){
-        return false
+        res.status(403).send({message: "no token supplied"})
      }try{
          const verify  = await jwt.verify(token.replace("Bearer ", "" ),secret)
          req.user = verify
