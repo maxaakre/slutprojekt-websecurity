@@ -5,7 +5,7 @@ const auth = require('./verifytoken');
 
 
 //GETTING ALL ORDERS, AND ORDER FOR EVERY USER
-router.get("/api/orders",auth.auth, async (req, res) => {
+router.get("/",auth.auth, async (req, res) => {
   if(req.user.role === "admin"){
     const order = await Order.all();
     console.log(req.headers.authorization)
@@ -22,7 +22,7 @@ router.get("/api/orders",auth.auth, async (req, res) => {
   });
 
 //POST ALL ORDERS
-router.post("/api/orders",auth.auth, async(req,res) =>{
+router.post("/",auth.auth, async(req,res) =>{
     const order = await Order.create(req.body,req.user.userID)
     if(order){
       res.status(201).json(order)

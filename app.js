@@ -10,13 +10,12 @@ require('dotenv').config()
 //Middlewares
 app.use(express.static('public'));
 app.use(express.json());
-app.use(express.urlencoded()); 
 
 
 //Routes
-app.use('/', userRoutes)
-app.use('/', productRoutes)
-app.use('/', productOrders)
+app.use('/api', userRoutes)
+app.use('/api/products', productRoutes)
+app.use('/api/orders', productOrders)
 
 
 //server

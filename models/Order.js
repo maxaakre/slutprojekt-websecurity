@@ -38,7 +38,7 @@ module.exports = {
     
     const newDocument = await Order.insert(newOrder)
   
-    // INSERT ORDER IN ARRAY AND INSERTING ORDER INTO DATABASE
+    // PUSHING NEW ORDER IN ARRAY ORDER HISTORY AND INSERTING ORDER INTO DATABASE, SETTING IN PAYMENT DETAILS IN TO PAYMENT KEY IN USER
     const updateOrder = await User.users.update(
       {
         _id: userID
