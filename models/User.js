@@ -66,7 +66,13 @@ module.exports = {
       }
     }
   },
-  // EXPORT USERS DATABASE
-  users
+  async addUserPayment(userID,payment){
+    await users.update({_id:userID}, {$set: {payment:payment}})
+  },
+  async addOrdertoUser(userID,orderID){
+    await users.update({_id:userID},{$push: {orderHistory:orderID}})
+  } 
+  
+
  
 };

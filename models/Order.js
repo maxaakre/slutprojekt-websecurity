@@ -36,23 +36,12 @@ module.exports = {
       orderValue: total
     }
     
-    const newDocument = await Order.insert(newOrder)
   
     // PUSHING NEW ORDER IN ARRAY ORDER HISTORY AND INSERTING ORDER INTO DATABASE, SETTING IN PAYMENT DETAILS IN TO PAYMENT KEY IN USER
-    const updateOrder = await User.users.update(
-      {
-        _id: userID
-      },
-      {
-        $push: {
-          orderHistory: newDocument._id,
-        },
-        $set:{
-          payment:body.payment
-        }
-      
-      }
-    )
-    return updateOrder
+    const newDocument = await Order.insert(newOrder)
+    await User.addUserPayment(userID, body.payment)
+    await User.addOrdertoUser(userID,newDocument._id)
+     return newDocument
+     
   }
 }

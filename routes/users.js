@@ -22,12 +22,7 @@ router.post("/auth", async (req, res) => {
     res.status(201).json(token)
     console.log(token);
   }else{
-    if(!token){
-      res.status(403).send({message: "no token supplied"})
-    }else{
-      res.status(401).json({error: "Not authorized"})
-    }
-    
+    res.status(401).json({error: "Not authorized"})
   }
 });
 
